@@ -3,21 +3,129 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <style>
-
+@font-face {
+  font-family: "Modesto";
+  src: url("../fonts/modesto/modesto.woff2") format("woff2");
+}
+.AdvName {
+  font-family: Modesto;
+  font-size: 36px;
+  color: white;
+  text-shadow: 0 0 4px #000000;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.AdvDesc {
+  font-family: Modesto;
+  font-size: 18px;
+  color: white;
+  line-height: 125%;
+  text-shadow: 0 0 4px #000000;
+  margin-left: 3px;
+}
+.AdvList {
+  font-family: Modesto;
+  font-size: 26px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 125%;
+  text-align: right;
+  -webkit-text-stroke: 0.25px #1c1c1c !important;
+  text-shadow: #1c1c1c 0px 2px 0px, #1c1c1c 0px 1px 0px, #1c1c1c 0px 0px 0px, #1c1c1c 1px 2px 0px, #1c1c1c 1px 1px 0px, #1c1c1c 1px 0px 0px, #1c1c1c 2px 2px 2px, #1c1c1c 2px 1px 0px, #1c1c1c 2px 0px 0px, #1c1c1c -0px 2px 0px, #1c1c1c -0px 1px 0px, #1c1c1c -0px 0px 0px, #1c1c1c -1px 2px 0px, #1c1c1c -1px 1px 0px, #1c1c1c -1px 0px 0px, #1c1c1c -2px 2px 2px, #1c1c1c -2px 1px 0px, #1c1c1c -2px 0px 0px, #1c1c1c 0px -2px 0px, #1c1c1c 0px -1px 0px, #1c1c1c 0px -0px 0px, #1c1c1c 1px -2px 0px, #1c1c1c 1px -1px 0px, #1c1c1c 1px -0px 0px, #1c1c1c 2px -2px 2px, #1c1c1c 2px -1px 0px, #1c1c1c 2px -0px 0px, #1c1c1c -0px -2px 0px, #1c1c1c -0px -1px 0px, #1c1c1c -0px -0px 0px, #1c1c1c -1px -2px 0px, #1c1c1c -1px -1px 0px, #1c1c1c -1px -0px 0px, #1c1c1c -2px -2px 2px, #1c1c1c -2px -1px 0px, #1c1c1c -2px -0px 0px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px !important;
+}
+.CharName {
+  font-family: Modesto;
+  font-size: 30px;
+  color: #1c1c1c;
+  width: 308px;
+  height: 40px;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.8px;
+}
+.CharTitle {
+  font-family: Modesto;
+  font-size: 14px;
+  margin-top: -3px;
+  color: #1c1c1c;
+  width: 325px;
+  height: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 6px;
+  letter-spacing: -0.8px;
+}
+.CharBox1 {
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+.CharBox2 {
+  position: absolute;
+  top: 0;
+  left: 480px;
+}
+.CharBox3 {
+  position: absolute;
+  top: 0;
+  left: 960px;
+}
+.CharBox4 {
+  position: absolute;
+  top: 0;
+  left: 1440px;
+}
+.AdvListBox {
+  position: absolute;
+  top: 100px;
+  right: 1200px;
+}
+.AdvBox {
+position: absolute;
+top: 200px;
+left: 10px;
+width: 725px;
+}
+.AdvBox2 {
+position: absolute;
+top: 800px;
+left: 10px;
+width: 1450px;
+}
 </style>
 </head>
 <body>
-
-<div class='' id="1"></div>
-<div class='' id="2"></div>
-<div class='' id="3"></div>
-<div class='' id="4"></div>
-<div class='' id="5"></div>
-<div class='' id="6"></div>
-<div class='' id="7"></div>
-<div class='' id="8"></div>
-<div class='' id="9"></div>
-<div class='' id="10"></div>
+<div class="CharBox1">
+<div class="CharName" id="CharacterName01"></div>
+<div class="CharTitle" id="CharacterTitle01"></div>
+</div>
+<div class="CharBox2">
+<div class="CharName" id="CharacterName02"></div>
+<div class="CharTitle" id="CharacterTitle02"></div>
+</div>
+<div class="CharBox3">
+<div class="CharName" id="CharacterName03"></div>
+<div class="CharTitle" id="CharacterTitle03"></div>
+</div>
+<div class="CharBox4">
+<div class="CharName" id="CharacterName04"></div>
+<div class="CharTitle" id="CharacterTitle04"></div>
+</div>
+<div class="AdvListBox">
+<div class="AdvList" id="AdvList1"></div>
+<div class="AdvList" id="AdvList2"></div>
+<div class="AdvList" id="AdvList3"></div>
+</div>
+<div class="AdvBox">
+<div class="AdvName" id="AdventureTitle"></div>
+<div class="AdvDesc" id="AdventureDescription"></div>
+</div>
+<div class="AdvBox2">
+<div class="AdvName" id="AdventureTitle2"></div>
+<div class="AdvDesc" id="AdventureDescription2"></div>
+</div>
 
 <script>
 // pull data from google sheets
@@ -28,22 +136,27 @@ function initDatastream() {
       parseFeed(this);
     }
   }
-  xhttp.open("GET", "https://spreadsheets.google.com/feeds/cells/1pCGH0oxVbkOK4iLmbcmo3I44bWN2drFXhrlIMDioVfU/2/public/values");
+  xhttp.open("GET", "https://spreadsheets.google.com/feeds/cells/1RbvEAtAvqr79s5FQx0X0f4t9LYxzf0cIy8_w6sOi6MQ/1/public/values");
   xhttp.send();
 }
 // insert google sheets data into html
 function parseFeed(xml) {
   var xmlDoc = xml.responseXML;
-  document.getElementById("1").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[0].childNodes[0].nodeValue;
-  document.getElementById("2").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[1].childNodes[0].nodeValue;
-  document.getElementById("3").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[2].childNodes[0].nodeValue;
-  document.getElementById("4").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[3].childNodes[0].nodeValue;
-  document.getElementById("5").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[4].childNodes[0].nodeValue;
-  document.getElementById("6").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[5].childNodes[0].nodeValue;
-  document.getElementById("7").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[6].childNodes[0].nodeValue;
-  document.getElementById("8").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[7].childNodes[0].nodeValue;
-  document.getElementById("9").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[8].childNodes[0].nodeValue;
-  document.getElementById("10").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[9].childNodes[0].nodeValue;
+  document.getElementById("AdventureTitle").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[0].childNodes[0].nodeValue;
+  document.getElementById("AdventureDescription").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[1].childNodes[0].nodeValue;
+  document.getElementById("AdventureTitle2").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[2].childNodes[0].nodeValue;
+  document.getElementById("AdventureDescription2").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[3].childNodes[0].nodeValue;
+  document.getElementById("CharacterName01").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[4].childNodes[0].nodeValue;
+  document.getElementById("CharacterTitle01").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[5].childNodes[0].nodeValue;
+  document.getElementById("CharacterName02").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[6].childNodes[0].nodeValue;
+  document.getElementById("CharacterTitle02").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[7].childNodes[0].nodeValue;
+  document.getElementById("CharacterName03").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[8].childNodes[0].nodeValue;
+  document.getElementById("CharacterTitle03").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[9].childNodes[0].nodeValue;
+  document.getElementById("CharacterName04").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[10].childNodes[0].nodeValue;
+  document.getElementById("CharacterTitle04").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[11].childNodes[0].nodeValue;
+  document.getElementById("AdvList1").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[12].childNodes[0].nodeValue;
+  document.getElementById("AdvList2").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[13].childNodes[0].nodeValue;
+  document.getElementById("AdvList3").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[14].childNodes[0].nodeValue;
 }
 // initialize 5 seconds update interval
 setInterval(initDatastream, 5000);
