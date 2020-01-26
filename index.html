@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+
+<div class='' id="1"></div>
+<div class='' id="2"></div>
+<div class='' id="3"></div>
+<div class='' id="4"></div>
+<div class='' id="5"></div>
+<div class='' id="6"></div>
+<div class='' id="7"></div>
+<div class='' id="8"></div>
+<div class='' id="9"></div>
+<div class='' id="10"></div>
+
+<script>
+// pull data from google sheets
+function initDatastream() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      parseFeed(this);
+    }
+  }
+  xhttp.open("GET", "https://spreadsheets.google.com/feeds/cells/1pCGH0oxVbkOK4iLmbcmo3I44bWN2drFXhrlIMDioVfU/2/public/values");
+  xhttp.send();
+}
+// insert google sheets data into html
+function parseFeed(xml) {
+  var xmlDoc = xml.responseXML;
+  document.getElementById("1").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[0].childNodes[0].nodeValue;
+  document.getElementById("2").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[1].childNodes[0].nodeValue;
+  document.getElementById("3").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[2].childNodes[0].nodeValue;
+  document.getElementById("4").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[3].childNodes[0].nodeValue;
+  document.getElementById("5").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[4].childNodes[0].nodeValue;
+  document.getElementById("6").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[5].childNodes[0].nodeValue;
+  document.getElementById("7").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[6].childNodes[0].nodeValue;
+  document.getElementById("8").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[7].childNodes[0].nodeValue;
+  document.getElementById("9").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[8].childNodes[0].nodeValue;
+  document.getElementById("10").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[9].childNodes[0].nodeValue;
+}
+// initialize 5 seconds update interval
+setInterval(initDatastream, 5000);
+</script>
+</body>
+</html>
