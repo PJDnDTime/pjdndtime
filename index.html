@@ -142,24 +142,24 @@ function initDatastream() {
 // insert google sheets data into html
 function parseFeed(xml) {
   var xmlDoc = xml.responseXML;
-  document.getElementById("AdventureTitle").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[0].childNodes[0].nodeValue;
-  document.getElementById("AdventureDescription").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[1].childNodes[0].nodeValue;
-  document.getElementById("AdventureTitle2").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[2].childNodes[0].nodeValue;
-  document.getElementById("AdventureDescription2").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[3].childNodes[0].nodeValue;
-  document.getElementById("CharacterName01").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[4].childNodes[0].nodeValue;
-  document.getElementById("CharacterTitle01").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[5].childNodes[0].nodeValue;
-  document.getElementById("CharacterName02").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[6].childNodes[0].nodeValue;
-  document.getElementById("CharacterTitle02").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[7].childNodes[0].nodeValue;
-  document.getElementById("CharacterName03").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[8].childNodes[0].nodeValue;
-  document.getElementById("CharacterTitle03").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[9].childNodes[0].nodeValue;
-  document.getElementById("CharacterName04").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[10].childNodes[0].nodeValue;
-  document.getElementById("CharacterTitle04").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[11].childNodes[0].nodeValue;
-  document.getElementById("AdvList1").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[12].childNodes[0].nodeValue;
-  document.getElementById("AdvList2").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[13].childNodes[0].nodeValue;
-  document.getElementById("AdvList3").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[14].childNodes[0].nodeValue;
+  document.getElementById("AdventureTitle").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[1].childNodes[0].nodeValue;
+  document.getElementById("AdventureDescription").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[2].childNodes[0].nodeValue;
+  document.getElementById("AdventureTitle2").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[3].childNodes[0].nodeValue;
+  document.getElementById("AdventureDescription2").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[4].childNodes[0].nodeValue;
+  document.getElementById("CharacterName01").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[5].childNodes[0].nodeValue;
+  document.getElementById("CharacterTitle01").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[6].childNodes[0].nodeValue;
+  document.getElementById("CharacterName02").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[7].childNodes[0].nodeValue;
+  document.getElementById("CharacterTitle02").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[8].childNodes[0].nodeValue;
+  document.getElementById("CharacterName03").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[9].childNodes[0].nodeValue;
+  document.getElementById("CharacterTitle03").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[10].childNodes[0].nodeValue;
+  document.getElementById("CharacterName04").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[11].childNodes[0].nodeValue;
+  document.getElementById("CharacterTitle04").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[12].childNodes[0].nodeValue;
+  document.getElementById("AdvList1").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[13].childNodes[0].nodeValue;
+  document.getElementById("AdvList2").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[14].childNodes[0].nodeValue;
+  document.getElementById("AdvList3").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[15].childNodes[0].nodeValue;
 }
-// initialize 5 seconds update interval
-setInterval(initDatastream, 5000);
+// initialize 2 seconds update interval
+setInterval(initDatastream, 2000);
 </script>
 </body>
 </html>
