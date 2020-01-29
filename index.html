@@ -3,129 +3,151 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <style>
+
 @font-face {
-  font-family: "Modesto";
-  src: url("../fonts/modesto/modesto.woff2") format("woff2");
+font-family: "Modesto";
+src: url("https://dndtime.stream/fonts/modesto/modesto.woff2") format("woff2");
 }
-.AdvName {
-  font-family: Modesto;
-  font-size: 36px;
-  color: white;
-  text-shadow: 0 0 4px #000000;
-  margin-top: 5px;
-  margin-bottom: 10px;
+
+body {
+width: 1920px;
+height: 1080px;
+margin: 0;
+padding: 0;
+font-family: Modesto;
+-webkit-font-smoothing: antialiased;
+-moz-font-smoothing: unset;
+-moz-osx-font-smoothing: grayscale;
+font-smoothing: antialiased;
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+backface-visibility: hidden;
+text-rendering: optimizeLegibility;
 }
-.AdvDesc {
-  font-family: Modesto;
-  font-size: 18px;
-  color: white;
-  line-height: 125%;
-  text-shadow: 0 0 4px #000000;
-  margin-left: 3px;
-}
-.AdvList {
-  font-family: Modesto;
-  font-size: 26px;
-  color: #fff;
-  font-weight: 600;
-  line-height: 125%;
-  text-align: right;
-  -webkit-text-stroke: 0.25px #1c1c1c !important;
-  text-shadow: #1c1c1c 0px 2px 0px, #1c1c1c 0px 1px 0px, #1c1c1c 0px 0px 0px, #1c1c1c 1px 2px 0px, #1c1c1c 1px 1px 0px, #1c1c1c 1px 0px 0px, #1c1c1c 2px 2px 2px, #1c1c1c 2px 1px 0px, #1c1c1c 2px 0px 0px, #1c1c1c -0px 2px 0px, #1c1c1c -0px 1px 0px, #1c1c1c -0px 0px 0px, #1c1c1c -1px 2px 0px, #1c1c1c -1px 1px 0px, #1c1c1c -1px 0px 0px, #1c1c1c -2px 2px 2px, #1c1c1c -2px 1px 0px, #1c1c1c -2px 0px 0px, #1c1c1c 0px -2px 0px, #1c1c1c 0px -1px 0px, #1c1c1c 0px -0px 0px, #1c1c1c 1px -2px 0px, #1c1c1c 1px -1px 0px, #1c1c1c 1px -0px 0px, #1c1c1c 2px -2px 2px, #1c1c1c 2px -1px 0px, #1c1c1c 2px -0px 0px, #1c1c1c -0px -2px 0px, #1c1c1c -0px -1px 0px, #1c1c1c -0px -0px 0px, #1c1c1c -1px -2px 0px, #1c1c1c -1px -1px 0px, #1c1c1c -1px -0px 0px, #1c1c1c -2px -2px 2px, #1c1c1c -2px -1px 0px, #1c1c1c -2px -0px 0px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px !important;
-}
-.CharName {
-  font-family: Modesto;
-  font-size: 30px;
-  color: #1c1c1c;
-  width: 308px;
-  height: 40px;
-  white-space: nowrap;
-  overflow-x: hidden;
-  text-overflow: ellipsis;
-  letter-spacing: -0.8px;
-}
-.CharTitle {
-  font-family: Modesto;
-  font-size: 14px;
-  margin-top: -3px;
-  color: #1c1c1c;
-  width: 325px;
-  height: 22px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 6px;
-  letter-spacing: -0.8px;
-}
-.CharBox1 {
-  position: absolute;
-  top: 0;
-  left: 0px;
-}
-.CharBox2 {
-  position: absolute;
-  top: 0;
-  left: 480px;
-}
-.CharBox3 {
-  position: absolute;
-  top: 0;
-  left: 960px;
-}
-.CharBox4 {
-  position: absolute;
-  top: 0;
-  left: 1440px;
-}
-.AdvListBox {
-  position: absolute;
-  top: 100px;
-  right: 1200px;
-}
-.AdvBox {
+
+.advList {
+width: 800px;
+height: 110px;
 position: absolute;
-top: 200px;
-left: 10px;
-width: 725px;
+left: 1110px;
+top: 26px;
+color: #fff;
+font-size: 26px;
+line-height: 125%;
+text-align: right;
+text-shadow: #1c1c1c 0px 2px 0px, #1c1c1c 0px 1px 0px, #1c1c1c 0px 0px 0px, #1c1c1c 1px 2px 0px, #1c1c1c 1px 1px 0px, #1c1c1c 1px 0px 0px, #1c1c1c 2px 2px 2px, #1c1c1c 2px 1px 0px, #1c1c1c 2px 0px 0px, #1c1c1c -0px 2px 0px, #1c1c1c -0px 1px 0px, #1c1c1c -0px 0px 0px, #1c1c1c -1px 2px 0px, #1c1c1c -1px 1px 0px, #1c1c1c -1px 0px 0px, #1c1c1c -2px 2px 2px, #1c1c1c -2px 1px 0px, #1c1c1c -2px 0px 0px, #1c1c1c 0px -2px 0px, #1c1c1c 0px -1px 0px, #1c1c1c 0px -0px 0px, #1c1c1c 1px -2px 0px, #1c1c1c 1px -1px 0px, #1c1c1c 1px -0px 0px, #1c1c1c 2px -2px 2px, #1c1c1c 2px -1px 0px, #1c1c1c 2px -0px 0px, #1c1c1c -0px -2px 0px, #1c1c1c -0px -1px 0px, #1c1c1c -0px -0px 0px, #1c1c1c -1px -2px 0px, #1c1c1c -1px -1px 0px, #1c1c1c -1px -0px 0px, #1c1c1c -2px -2px 2px, #1c1c1c -2px -1px 0px, #1c1c1c -2px -0px 0px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px;
 }
-.AdvBox2 {
+
+.advName {
+width: 700px;
+height: 65px;
 position: absolute;
-top: 800px;
-left: 10px;
-width: 1450px;
+left: 860px;
+top: 180px;
+color: #fff;
+font-size: 36px;
+line-height: 125%;
+text-align: left;
+text-shadow: #1c1c1c 0px 2px 0px, #1c1c1c 0px 1px 0px, #1c1c1c 0px 0px 0px, #1c1c1c 1px 2px 0px, #1c1c1c 1px 1px 0px, #1c1c1c 1px 0px 0px, #1c1c1c 2px 2px 2px, #1c1c1c 2px 1px 0px, #1c1c1c 2px 0px 0px, #1c1c1c -0px 2px 0px, #1c1c1c -0px 1px 0px, #1c1c1c -0px 0px 0px, #1c1c1c -1px 2px 0px, #1c1c1c -1px 1px 0px, #1c1c1c -1px 0px 0px, #1c1c1c -2px 2px 2px, #1c1c1c -2px 1px 0px, #1c1c1c -2px 0px 0px, #1c1c1c 0px -2px 0px, #1c1c1c 0px -1px 0px, #1c1c1c 0px -0px 0px, #1c1c1c 1px -2px 0px, #1c1c1c 1px -1px 0px, #1c1c1c 1px -0px 0px, #1c1c1c 2px -2px 2px, #1c1c1c 2px -1px 0px, #1c1c1c 2px -0px 0px, #1c1c1c -0px -2px 0px, #1c1c1c -0px -1px 0px, #1c1c1c -0px -0px 0px, #1c1c1c -1px -2px 0px, #1c1c1c -1px -1px 0px, #1c1c1c -1px -0px 0px, #1c1c1c -2px -2px 2px, #1c1c1c -2px -1px 0px, #1c1c1c -2px -0px 0px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px;
 }
+
+.advDesc {
+width: 700px;
+height: 550px;
+position: absolute;
+left: 860px;
+top: 225px;
+color: #fff;
+font-size: 26px;
+line-height: 125%;
+text-align: left;
+text-shadow: #1c1c1c 0px 2px 0px, #1c1c1c 0px 1px 0px, #1c1c1c 0px 0px 0px, #1c1c1c 1px 2px 0px, #1c1c1c 1px 1px 0px, #1c1c1c 1px 0px 0px, #1c1c1c 2px 2px 2px, #1c1c1c 2px 1px 0px, #1c1c1c 2px 0px 0px, #1c1c1c -0px 2px 0px, #1c1c1c -0px 1px 0px, #1c1c1c -0px 0px 0px, #1c1c1c -1px 2px 0px, #1c1c1c -1px 1px 0px, #1c1c1c -1px 0px 0px, #1c1c1c -2px 2px 2px, #1c1c1c -2px 1px 0px, #1c1c1c -2px 0px 0px, #1c1c1c 0px -2px 0px, #1c1c1c 0px -1px 0px, #1c1c1c 0px -0px 0px, #1c1c1c 1px -2px 0px, #1c1c1c 1px -1px 0px, #1c1c1c 1px -0px 0px, #1c1c1c 2px -2px 2px, #1c1c1c 2px -1px 0px, #1c1c1c 2px -0px 0px, #1c1c1c -0px -2px 0px, #1c1c1c -0px -1px 0px, #1c1c1c -0px -0px 0px, #1c1c1c -1px -2px 0px, #1c1c1c -1px -1px 0px, #1c1c1c -1px -0px 0px, #1c1c1c -2px -2px 2px, #1c1c1c -2px -1px 0px, #1c1c1c -2px -0px 0px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px;
+}
+
+.pName {
+width: 300px;
+height: 36px;
+position: absolute;
+color: #1c1c1c;
+font-size: 28px;
+text-align: left;
+white-space: nowrap; 
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.pTitle {
+width: 300px;
+height: 26px;
+position: absolute;
+color: #1c1c1c;
+font-size: 18px;
+text-align: left;
+white-space: nowrap; 
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.p1Name {
+left: 100px;
+top: 910px;
+color: #1c1c1c;
+}
+
+.p1Title {
+left: 100px;
+top: 946px;
+}
+
+.p2Name {
+left: 580px;
+top: 910px;
+}
+
+.p2Title {
+left: 580px;
+top: 946px;
+}
+
+.p3Name {
+left: 1060px;
+top: 910px;
+}
+
+.p3Title {
+left: 1060px;
+top: 946px;
+}
+
+.p4Name {
+left: 1540px;
+top: 910px;
+}
+
+.p4Title {
+left: 1540px;
+top: 946px;
+}
+
 </style>
 </head>
+
 <body>
-<div class="CharBox1">
-<div class="CharName" id="CharacterName01"></div>
-<div class="CharTitle" id="CharacterTitle01"></div>
+<div class="advList">
+<div id="advList1"></div>
+<div id="advList2"></div>
+<div id="advList3"></div>
 </div>
-<div class="CharBox2">
-<div class="CharName" id="CharacterName02"></div>
-<div class="CharTitle" id="CharacterTitle02"></div>
-</div>
-<div class="CharBox3">
-<div class="CharName" id="CharacterName03"></div>
-<div class="CharTitle" id="CharacterTitle03"></div>
-</div>
-<div class="CharBox4">
-<div class="CharName" id="CharacterName04"></div>
-<div class="CharTitle" id="CharacterTitle04"></div>
-</div>
-<div class="AdvListBox">
-<div class="AdvList" id="AdvList1"></div>
-<div class="AdvList" id="AdvList2"></div>
-<div class="AdvList" id="AdvList3"></div>
-</div>
-<div class="AdvBox">
-<div class="AdvName" id="AdventureTitle"></div>
-<div class="AdvDesc" id="AdventureDescription"></div>
-</div>
-<div class="AdvBox2">
-<div class="AdvName" id="AdventureTitle2"></div>
-<div class="AdvDesc" id="AdventureDescription2"></div>
-</div>
+<div class="advName" id="advName"></div>
+<div class="advDesc" id="advDesc"></div>
+<div class="p1Name pName" id="p1Name"></div>
+<div class="p1Title pTitle" id="p1Title"></div>
+<div class="p2Name pName" id="p2Name"></div>
+<div class="p2Title pTitle" id="p2Title"></div>
+<div class="p3Name pName" id="p3Name"></div>
+<div class="p3Title pTitle" id="p3Title"></div>
+<div class="p4Name pName" id="p4Name"></div>
+<div class="p4Title pTitle" id="p4Title"></div>
 
 <script>
 // pull data from google sheets
@@ -142,21 +164,32 @@ function initDatastream() {
 // insert google sheets data into html
 function parseFeed(xml) {
   var xmlDoc = xml.responseXML;
-  document.getElementById("AdventureTitle").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[1].childNodes[0].nodeValue;
-  document.getElementById("AdventureDescription").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[2].childNodes[0].nodeValue;
-  document.getElementById("AdventureTitle2").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[3].childNodes[0].nodeValue;
-  document.getElementById("AdventureDescription2").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[4].childNodes[0].nodeValue;
-  document.getElementById("CharacterName01").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[5].childNodes[0].nodeValue;
-  document.getElementById("CharacterTitle01").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[6].childNodes[0].nodeValue;
-  document.getElementById("CharacterName02").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[7].childNodes[0].nodeValue;
-  document.getElementById("CharacterTitle02").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[8].childNodes[0].nodeValue;
-  document.getElementById("CharacterName03").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[9].childNodes[0].nodeValue;
-  document.getElementById("CharacterTitle03").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[10].childNodes[0].nodeValue;
-  document.getElementById("CharacterName04").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[11].childNodes[0].nodeValue;
-  document.getElementById("CharacterTitle04").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[12].childNodes[0].nodeValue;
-  document.getElementById("AdvList1").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[13].childNodes[0].nodeValue;
-  document.getElementById("AdvList2").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[14].childNodes[0].nodeValue;
-  document.getElementById("AdvList3").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[15].childNodes[0].nodeValue;
+  try { document.getElementById("advList1").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[10].childNodes[0].nodeValue; }
+    catch { document.getElementById("advList1").innerHTML = "" } finally {}
+  try { document.getElementById("advList2").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[11].childNodes[0].nodeValue; }
+    catch { document.getElementById("advList2").innerHTML = "" } finally {}
+  try { document.getElementById("advList3").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[12].childNodes[0].nodeValue; }
+    catch { document.getElementById("advList3").innerHTML = "" } finally {}
+  try { document.getElementById("advName").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[0].childNodes[0].nodeValue; }
+    catch { document.getElementById("AdvName").innerHTML = "" } finally {}
+  try { document.getElementById("advDesc").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[1].childNodes[0].nodeValue; }
+    catch { document.getElementById("advDesc").innerHTML = "" } finally {}
+  try { document.getElementById("p1Name").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[2].childNodes[0].nodeValue; }
+    catch { document.getElementById("p1Name").innerHTML = "" } finally {}
+  try { document.getElementById("p1Title").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[3].childNodes[0].nodeValue; }
+    catch { document.getElementById("p1Title").innerHTML = "" } finally {}
+  try { document.getElementById("p2Name").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[4].childNodes[0].nodeValue; }
+    catch { document.getElementById("p2Name").innerHTML = "" } finally {}
+  try { document.getElementById("p2Title").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[5].childNodes[0].nodeValue; }
+    catch { document.getElementById("p2Title").innerHTML = "" } finally {}
+  try { document.getElementById("p3Name").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[6].childNodes[0].nodeValue; }
+    catch { document.getElementById("p3Name").innerHTML = "" } finally {}
+  try { document.getElementById("p3Title").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[7].childNodes[0].nodeValue; }
+    catch { document.getElementById("p3Title").innerHTML = "" } finally {}
+  try { document.getElementById("p4Name").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[8].childNodes[0].nodeValue; }
+    catch { document.getElementById("p4Name").innerHTML = "" } finally {}
+  try { document.getElementById("p4Title").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[9].childNodes[0].nodeValue; }
+    catch { document.getElementById("p4Title").innerHTML = "" } finally {}
 }
 // initialize 2 seconds update interval
 setInterval(initDatastream, 2000);
