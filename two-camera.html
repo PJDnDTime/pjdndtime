@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+
+@font-face {
+font-family: "Modesto";
+src: url("../fonts/modesto/modesto.woff2") format("woff2");
+}
+
+body {
+width: 1920px;
+height: 1080px;
+margin: 0;
+padding: 0;
+font-family: Modesto;
+-webkit-font-smoothing: antialiased;
+-moz-font-smoothing: unset;
+-moz-osx-font-smoothing: grayscale;
+font-smoothing: antialiased;
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+backface-visibility: hidden;
+text-rendering: optimizeLegibility;
+}
+
+.advList {
+width: 800px;
+height: 110px;
+position: absolute;
+left: 1110px;
+top: 26px;
+color: #fff;
+font-size: 26px;
+line-height: 125%;
+text-align: right;
+text-shadow: #1c1c1c 0px 2px 0px, #1c1c1c 0px 1px 0px, #1c1c1c 0px 0px 0px, #1c1c1c 1px 2px 0px, #1c1c1c 1px 1px 0px, #1c1c1c 1px 0px 0px, #1c1c1c 2px 2px 2px, #1c1c1c 2px 1px 0px, #1c1c1c 2px 0px 0px, #1c1c1c -0px 2px 0px, #1c1c1c -0px 1px 0px, #1c1c1c -0px 0px 0px, #1c1c1c -1px 2px 0px, #1c1c1c -1px 1px 0px, #1c1c1c -1px 0px 0px, #1c1c1c -2px 2px 2px, #1c1c1c -2px 1px 0px, #1c1c1c -2px 0px 0px, #1c1c1c 0px -2px 0px, #1c1c1c 0px -1px 0px, #1c1c1c 0px -0px 0px, #1c1c1c 1px -2px 0px, #1c1c1c 1px -1px 0px, #1c1c1c 1px -0px 0px, #1c1c1c 2px -2px 2px, #1c1c1c 2px -1px 0px, #1c1c1c 2px -0px 0px, #1c1c1c -0px -2px 0px, #1c1c1c -0px -1px 0px, #1c1c1c -0px -0px 0px, #1c1c1c -1px -2px 0px, #1c1c1c -1px -1px 0px, #1c1c1c -1px -0px 0px, #1c1c1c -2px -2px 2px, #1c1c1c -2px -1px 0px, #1c1c1c -2px -0px 0px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px;
+}
+
+.advName {
+width: 700px;
+height: 65px;
+position: absolute;
+left: 860px;
+top: 180px;
+color: #fff;
+font-size: 36px;
+line-height: 125%;
+text-align: left;
+text-shadow: #1c1c1c 0px 2px 0px, #1c1c1c 0px 1px 0px, #1c1c1c 0px 0px 0px, #1c1c1c 1px 2px 0px, #1c1c1c 1px 1px 0px, #1c1c1c 1px 0px 0px, #1c1c1c 2px 2px 2px, #1c1c1c 2px 1px 0px, #1c1c1c 2px 0px 0px, #1c1c1c -0px 2px 0px, #1c1c1c -0px 1px 0px, #1c1c1c -0px 0px 0px, #1c1c1c -1px 2px 0px, #1c1c1c -1px 1px 0px, #1c1c1c -1px 0px 0px, #1c1c1c -2px 2px 2px, #1c1c1c -2px 1px 0px, #1c1c1c -2px 0px 0px, #1c1c1c 0px -2px 0px, #1c1c1c 0px -1px 0px, #1c1c1c 0px -0px 0px, #1c1c1c 1px -2px 0px, #1c1c1c 1px -1px 0px, #1c1c1c 1px -0px 0px, #1c1c1c 2px -2px 2px, #1c1c1c 2px -1px 0px, #1c1c1c 2px -0px 0px, #1c1c1c -0px -2px 0px, #1c1c1c -0px -1px 0px, #1c1c1c -0px -0px 0px, #1c1c1c -1px -2px 0px, #1c1c1c -1px -1px 0px, #1c1c1c -1px -0px 0px, #1c1c1c -2px -2px 2px, #1c1c1c -2px -1px 0px, #1c1c1c -2px -0px 0px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px;
+}
+
+.advDesc {
+width: 700px;
+height: 550px;
+position: absolute;
+left: 860px;
+top: 225px;
+color: #fff;
+font-size: 26px;
+line-height: 125%;
+text-align: left;
+text-shadow: #1c1c1c 0px 2px 0px, #1c1c1c 0px 1px 0px, #1c1c1c 0px 0px 0px, #1c1c1c 1px 2px 0px, #1c1c1c 1px 1px 0px, #1c1c1c 1px 0px 0px, #1c1c1c 2px 2px 2px, #1c1c1c 2px 1px 0px, #1c1c1c 2px 0px 0px, #1c1c1c -0px 2px 0px, #1c1c1c -0px 1px 0px, #1c1c1c -0px 0px 0px, #1c1c1c -1px 2px 0px, #1c1c1c -1px 1px 0px, #1c1c1c -1px 0px 0px, #1c1c1c -2px 2px 2px, #1c1c1c -2px 1px 0px, #1c1c1c -2px 0px 0px, #1c1c1c 0px -2px 0px, #1c1c1c 0px -1px 0px, #1c1c1c 0px -0px 0px, #1c1c1c 1px -2px 0px, #1c1c1c 1px -1px 0px, #1c1c1c 1px -0px 0px, #1c1c1c 2px -2px 2px, #1c1c1c 2px -1px 0px, #1c1c1c 2px -0px 0px, #1c1c1c -0px -2px 0px, #1c1c1c -0px -1px 0px, #1c1c1c -0px -0px 0px, #1c1c1c -1px -2px 0px, #1c1c1c -1px -1px 0px, #1c1c1c -1px -0px 0px, #1c1c1c -2px -2px 2px, #1c1c1c -2px -1px 0px, #1c1c1c -2px -0px 0px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px, #1c1c1c 0px 0px 3px;
+}
+
+.pName {
+width: 300px;
+height: 36px;
+position: absolute;
+color: #1c1c1c;
+font-size: 28px;
+text-align: left;
+white-space: nowrap; 
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.pTitle {
+width: 300px;
+height: 26px;
+position: absolute;
+color: #1c1c1c;
+font-size: 18px;
+text-align: left;
+white-space: nowrap; 
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.p1Name {
+left: 100px;
+top: 910px;
+color: #1c1c1c;
+}
+
+.p1Title {
+left: 100px;
+top: 946px;
+}
+
+.p2Name {
+left: 580px;
+top: 910px;
+}
+
+.p2Title {
+left: 580px;
+top: 946px;
+}
+
+.p3Name {
+left: 1060px;
+top: 910px;
+}
+
+.p3Title {
+left: 1060px;
+top: 946px;
+}
+
+.p4Name {
+left: 1540px;
+top: 910px;
+}
+
+.p4Title {
+left: 1540px;
+top: 946px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="advList">
+<div id="advList1"></div>
+<div id="advList2"></div>
+<div id="advList3"></div>
+</div>
+<div class="advName" id="advName"></div>
+<div class="advDesc" id="advDesc"></div>
+<div class="p1Name pName" id="p1Name"></div>
+<div class="p1Title pTitle" id="p1Title"></div>
+<div class="p2Name pName" id="p2Name"></div>
+<div class="p2Title pTitle" id="p2Title"></div>
+<div class="p3Name pName" id="p3Name"></div>
+<div class="p3Title pTitle" id="p3Title"></div>
+<div class="p4Name pName" id="p4Name"></div>
+<div class="p4Title pTitle" id="p4Title"></div>
+
+<script>
+// pull data from google sheets
+function initDatastream() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      parseFeed(this);
+    }
+  }
+  xhttp.open("GET", "https://spreadsheets.google.com/feeds/cells/1RbvEAtAvqr79s5FQx0X0f4t9LYxzf0cIy8_w6sOi6MQ/1/public/values");
+  xhttp.send();
+}
+// insert google sheets data into html
+function parseFeed(xml) {
+  var xmlDoc = xml.responseXML;
+  try { document.getElementById("advList1").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[10].childNodes[0].nodeValue; }
+    catch { document.getElementById("advList1").innerHTML = "" } finally {}
+  try { document.getElementById("advList2").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[11].childNodes[0].nodeValue; }
+    catch { document.getElementById("advList2").innerHTML = "" } finally {}
+  try { document.getElementById("advList3").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[12].childNodes[0].nodeValue; }
+    catch { document.getElementById("advList3").innerHTML = "" } finally {}
+  try { document.getElementById("advName").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[0].childNodes[0].nodeValue; }
+    catch { document.getElementById("AdvName").innerHTML = "" } finally {}
+  try { document.getElementById("advDesc").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[1].childNodes[0].nodeValue; }
+    catch { document.getElementById("advDesc").innerHTML = "" } finally {}
+  try { document.getElementById("p1Name").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[2].childNodes[0].nodeValue; }
+    catch { document.getElementById("p1Name").innerHTML = "" } finally {}
+  try { document.getElementById("p1Title").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[3].childNodes[0].nodeValue; }
+    catch { document.getElementById("p1Title").innerHTML = "" } finally {}
+  try { document.getElementById("p2Name").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[4].childNodes[0].nodeValue; }
+    catch { document.getElementById("p2Name").innerHTML = "" } finally {}
+  try { document.getElementById("p2Title").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[5].childNodes[0].nodeValue; }
+    catch { document.getElementById("p2Title").innerHTML = "" } finally {}
+  try { document.getElementById("p3Name").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[6].childNodes[0].nodeValue; }
+    catch { document.getElementById("p3Name").innerHTML = "" } finally {}
+  try { document.getElementById("p3Title").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[7].childNodes[0].nodeValue; }
+    catch { document.getElementById("p3Title").innerHTML = "" } finally {}
+  try { document.getElementById("p4Name").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[8].childNodes[0].nodeValue; }
+    catch { document.getElementById("p4Name").innerHTML = "" } finally {}
+  try { document.getElementById("p4Title").innerHTML = xmlDoc.getElementsByTagName("gs:cell")[9].childNodes[0].nodeValue; }
+    catch { document.getElementById("p4Title").innerHTML = "" } finally {}
+}
+// initialize 2 seconds update interval
+setInterval(initDatastream, 2000);
+</script>
+</body>
+</html>
